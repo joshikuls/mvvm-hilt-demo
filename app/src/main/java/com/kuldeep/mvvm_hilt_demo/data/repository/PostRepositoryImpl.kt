@@ -19,4 +19,8 @@ class PostRepositoryImpl @Inject constructor(
     override suspend fun getPosts(): List<Post> {
         return apiService.getPosts().map { it.toDomain() }
     }
+
+    override suspend fun getPostDetails(postId: Int): Post {
+        return apiService.getPostDetails(postId = postId).toDomain()
+    }
 }

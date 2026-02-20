@@ -5,4 +5,5 @@ import retrofit2.http.POST
 
 interface PostRepository {
     suspend fun getPosts(): List<Post>
+    suspend fun getPostDetails(postId: Int): Post
 }

@@ -19,7 +19,7 @@ fun SearchBar(
         onValueChange = onValueChange,
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp),
+            .padding(horizontal = 8.dp, vertical = 8.dp),
         singleLine = true,
         label = {
             Text("Search by title")

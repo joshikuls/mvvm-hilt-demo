@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.kuldeep.mvvm_hilt_demo.navigation.AppNavGraph
 import com.kuldeep.mvvm_hilt_demo.ui.screens.list.PostScreen
 import com.kuldeep.mvvm_hilt_demo.ui.theme.MVVMHiltDemoTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -21,10 +22,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MVVMHiltDemoTheme {
-                PostScreen(
-                    onPostClick = { TODO() }
-                )
+            MVVMHiltDemoTheme(darkTheme = false) {
+                AppNavGraph()
             }
         }
     }
